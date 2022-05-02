@@ -11,19 +11,19 @@ const ItemList = () => {
                     <Row>
                         <Col md={12} style={{ display: "flex", justifyContent: "space-between", paddingTop: "15px" }}><RiHeart3Line className="icon" /><div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>USATO</p></div></Col>
                         <Col md={12} style={{ display: "flex" }}>
-                            <Carousel>
+                            <Carousel className="carousel">
                                 <Carousel.Item>
                                     <img
-                                        className="d-block w-100"
-                                        src="https://via.placeholder.com/500x250C/O https://placeholder.com/#content"
+                                        className="d-block w-100 imgCarousel"
+                                        src="https://m.media-amazon.com/images/I/51fES+YRTYL._AC_SY355_.jpg"
                                         alt="First slide"
                                     />
 
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
-                                        className="d-block w-100"
-                                        src="https://via.placeholder.com/500x250C/O https://placeholder.com/#content"
+                                        className="d-block w-100 imgCarousel"
+                                        src="https://m.media-amazon.com/images/I/61hzbxbJW2L._AC_SY355_.jpg"
                                         alt="Second slide"
                                     />
 
@@ -31,8 +31,8 @@ const ItemList = () => {
                                 </Carousel.Item>
                                 <Carousel.Item>
                                     <img
-                                        className="d-block w-100"
-                                        src="https://via.placeholder.com/500x250C/O https://placeholder.com/#content"
+                                        className="d-block w-100 imgCarousel"
+                                        src="https://m.media-amazon.com/images/I/51fES+YRTYL._AC_SY355_.jpg"
                                         alt="Third slide"
                                     />
 
@@ -48,7 +48,8 @@ const ItemList = () => {
                         <Col md={12}><p>TAGLIA <span style={{ fontWeight: "bold" }}> S M L XL</span></p></Col>
                         <Col md={12}><p>COLORI <span style={{ fontWeight: "bold" }}> +4</span></p></Col>
                         <Col md={12}><p style={{ fontWeight: "bold", fontSize: "1.5rem" }}>€ 3.900,00 <span style={{ fontWeight: "gray", color: "gray", fontSize: "1rem", textDecoration: "line-through" }}> € 4.000,00</span></p></Col>
-                        <Col md={6} style={{ display: "flex", justifyContent: "left", alignItems: "baseline", paddingBottom: "15px" }}><BsSquare /><p style={{ marginLeft: "10px" }}>COMPARA</p> </Col><Col md={6}><Link to="detail"><Button variant="dark">SCOPRI <BsArrowRight /></Button></Link></Col>
+                        <Col md={6} style={{ display: "flex", justifyContent: "left", alignItems: "baseline", paddingBottom: "15px" }}><BsSquare /><p style={{ marginLeft: "10px" }}>COMPARA</p> </Col>
+                        <Col md={6}><Link to="detail"><Button style={{ backgroundColor: "black", border: "none" }}>SCOPRI <BsArrowRight /></Button></Link></Col>
                     </Row>
                 </Col>
 
