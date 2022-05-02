@@ -9,7 +9,7 @@ const ItemList = () => {
             <Row>
                 <Col md={6} className="card">
                     <Row>
-                        <Col md={12} style={{ display: "flex", justifyContent: "space-between" }}><RiHeart3Line /><div height="80" width="80" style={{ backgroundColor: "red" }}><p style={{ fontWeight: "bold" }}>USATO</p></div></Col>
+                        <Col md={12} style={{ display: "flex", justifyContent: "space-between", paddingTop: "15px" }}><RiHeart3Line className="icon" /><div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>USATO</p></div></Col>
                         <Col md={12} style={{ display: "flex" }}>
                             <Carousel>
                                 <Carousel.Item>
@@ -40,22 +40,18 @@ const ItemList = () => {
                                 </Carousel.Item>
                             </Carousel>
                         </Col>
-                        <Col md={6}><p>CANNONDALE | 2019</p></Col>
-                        <Col md={6}><p><RiStarFill /><RiStarFill /><RiStarFill /><RiStarFill />    8.000</p></Col>
+                        <Col md={6}><p style={{ fontWeight: "bold" }}>CANNONDALE | 2019</p></Col>
+                        <Col md={4} style={{ justifyContent: "flex-end" }}><RiStarFill /><RiStarFill /><RiStarFill /><RiStarFill /></Col>   <Col md={2}><p> 8.000</p></Col>
                         <Col md={12}><h3 style={{ fontStyle: "italic", paddingLeft: "0", marginLeft: "0", fontWeight: "bold" }}>ADVENTURE NEO 1 EQ</h3></Col>
                         <Col md={12}><p className="description">Una bici elettrica ideale per andare a lavoro e godersi le caratteristiche stradine di campagna</p></Col>
                         <Col md={12}><Badge className="badge">E-BIKE CORSA</Badge></Col>
                         <Col md={12}><p>TAGLIA <span style={{ fontWeight: "bold" }}> S M L XL</span></p></Col>
                         <Col md={12}><p>COLORI <span style={{ fontWeight: "bold" }}> +4</span></p></Col>
                         <Col md={12}><p style={{ fontWeight: "bold", fontSize: "1.5rem" }}>€ 3.900,00 <span style={{ fontWeight: "gray", color: "gray", fontSize: "1rem", textDecoration: "line-through" }}> € 4.000,00</span></p></Col>
-                        <Col md={6}><BsSquare />COMPARA</Col><Col md={6}><Link to="detail"><Button variant="dark">SCOPRI <BsArrowRight /></Button></Link></Col>
+                        <Col md={6} style={{ display: "flex", justifyContent: "left", alignItems: "baseline", paddingBottom: "15px" }}><BsSquare /><p style={{ marginLeft: "10px" }}>COMPARA</p> </Col><Col md={6}><Link to="detail"><Button variant="dark">SCOPRI <BsArrowRight /></Button></Link></Col>
                     </Row>
                 </Col>
-                <Col md={6}>
 
-                    <RiHeart3Line />
-
-                </Col>
             </Row >
         </Container >
     );
