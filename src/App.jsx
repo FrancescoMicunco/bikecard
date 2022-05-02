@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import HomePage from "./HomePage.jsx";
+import HomePage from "./Pages/HomePage.jsx";
 import ItemList from "./Components/ItemList.jsx";
 import ItemDetails from "./Components/ItemDetails.jsx";
 import NotFound from "./Pages/NotFound.jsx";
