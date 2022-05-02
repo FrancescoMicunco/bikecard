@@ -1,9 +1,25 @@
 .App {
     padding-top: 4rem;
-    text-align: center;
+    text-align: left;
     color: rgb(4, 4, 4);
 }
 
 .App-link {
     color: #61dafb;
+}
+
+.card {
+    background-color: rgba(155, 155, 155, 0.123);
+    border: none;
+}
+
+.badge {
+    background-color: gray!important;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-style: italic;
 }
