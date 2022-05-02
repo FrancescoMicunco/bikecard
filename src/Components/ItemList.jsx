@@ -1,15 +1,31 @@
 import { Col, Container, Row, Carousel, Badge, Button } from 'react-bootstrap'
 import { RiHeart3Line, RiStarFill, RiHeart3Fill } from "react-icons/ri";
-import { BsSquare, BsArrowRight, BsSquareFill } from "react-icons/bs";
+import { BsSquare, BsArrowRight, BsCheckSquare } from "react-icons/bs";
 import { Link } from 'react-router-dom'
+import { useState } from "react"
 
 const ItemList = () => {
+
+    const [isFavourite, setIsFavourite] = useState(false)
+    const [isCompare, setIsCompare] = useState(false)
+
+    const isFav = () => {
+        setIsFavourite(!isFavourite)
+    }
+
+    const isComp = () => {
+        setIsCompare(!isCompare)
+    }
+
+
     return (
         <Container>
             <Row>
                 <Col md={6} className="card">
                     <Row>
-                        <Col md={12} style={{ display: "flex", justifyContent: "space-between", paddingTop: "15px" }}><RiHeart3Line className="icon" /><div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>USATO</p></div></Col>
+                        <Col md={12} style={{ display: "flex", justifyContent: "space-between", paddingTop: "15px" }}>
+                            {isFavourite ? <RiHeart3Fill className="icon" onClick={() => isFav()} /> : <RiHeart3Line className="icon" onClick={() => isFav()} />
+                            }<div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>USATO</p></div></Col>
                         <Col md={12} style={{ display: "flex" }}>
                             <Carousel className="carousel">
                                 <Carousel.Item>
@@ -48,7 +64,8 @@ const ItemList = () => {
                         <Col md={12}><p>TAGLIA <span style={{ fontWeight: "bold" }}> S M L XL</span></p></Col>
                         <Col md={12}><p>COLORI <span style={{ fontWeight: "bold" }}> +4</span></p></Col>
                         <Col md={12}><p style={{ fontWeight: "bold", fontSize: "1.5rem" }}>€ 3.900,00 <span style={{ fontWeight: "gray", color: "gray", fontSize: "1rem", textDecoration: "line-through" }}> € 4.000,00</span></p></Col>
-                        <Col md={6} style={{ display: "flex", justifyContent: "left", alignItems: "baseline", paddingBottom: "15px" }}><BsSquare /><p style={{ marginLeft: "10px" }}>COMPARA</p> </Col>
+                        <Col md={6} style={{ display: "flex", justifyContent: "left", alignItems: "baseline", paddingBottom: "15px" }}>
+                            {isCompare ? <BsCheckSquare onClick={() => isComp()} /> : <BsSquare onClick={() => isComp()} />}<p style={{ marginLeft: "10px" }}>COMPARA</p> </Col>
                         <Col md={6}><Link to="detail"><Button style={{ backgroundColor: "black", border: "none" }}>SCOPRI <BsArrowRight /></Button></Link></Col>
                     </Row>
                 </Col>
