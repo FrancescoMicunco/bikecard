@@ -27,9 +27,9 @@ const SingleItem = ({ data }) => {
                     <RiHeart3Line className="icon" onClick={() => isFav()} />
                 }
 
-                {data.state === "usato" ? <div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{data.state}</p></div>
+                {data.state === "usato" ? <div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 10px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{data.state}</p></div>
                     :
-                    <div height="40" width="80" style={{ backgroundColor: "gray", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{data.state}</p></div>
+                    <div height="40" width="80" style={{ backgroundColor: "gray", paddingTop: "20px", borderBottom: "solid 10px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{data.state}</p></div>
                 }
             </Col>
             <Col md={12} style={{ display: "flex" }}>
@@ -71,12 +71,12 @@ const SingleItem = ({ data }) => {
             <Col md={12}><Badge className="badge">{data.tag}</Badge></Col>
             <Col md={12}><p>TAGLIA <span style={{ fontWeight: "bold" }}> S M L XL</span></p></Col>
             <Col md={12}><p>COLORI <span style={{ fontWeight: "bold" }}> {data.colori}</span></p></Col>
-            <Col md={12}><p style={{ fontWeight: "bold", fontSize: "1.5rem", fontFamily: "Courier" }}>€ {data.discountPrice} <span style={{ fontWeight: "gray", color: "gray", fontSize: "1rem", textDecoration: "line-through" }}>€ {data.prezzo}</span></p></Col>
+            <Col md={12}><p style={{ fontWeight: "bold", fontSize: "1.5rem", fontFamily: "Titillium Web" }}>€ {data.discountPrice} <span style={{ fontWeight: "gray", color: "gray", fontSize: "1rem", textDecoration: "line-through" }}>€ {data.prezzo}</span></p></Col>
             <Col md={6} style={{ display: "flex", justifyContent: "left", alignItems: "baseline", paddingBottom: "15px" }}>
 
                 {isCompare ? <BsCheckSquare onClick={() => isComp()} /> : <BsSquare onClick={() => isComp()} />}<p style={{ marginLeft: "10px" }}>COMPARA</p> </Col>
 
-            <Col md={6}><Link to="detail"><Button style={{ backgroundColor: "black", border: "none" }}>SCOPRI <BsArrowRight /></Button></Link></Col>;
+            <Col md={6}><Link to="detail"><Button style={{ backgroundColor: "black", border: "none" }}>SCOPRI <BsArrowRight /></Button></Link></Col>
 
 
         </>)

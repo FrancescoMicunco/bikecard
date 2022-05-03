@@ -13,8 +13,9 @@
 }
 
 .card {
-    background-color: rgba(155, 155, 155, 0.123);
+    background-color: rgba(221, 221, 221, 0.123);
     border: none;
+    padding-bottom: 50px;
 }
 
 .badge {

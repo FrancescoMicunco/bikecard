@@ -11,7 +11,7 @@ const ItemList = () => {
         <Container style={{ display: 'flex' }}>
             <Row >
                 {data.map(e =>
-                    <Col md={5} className="card">
+                    <Col md={6} className="card">
                         <Row>
                             <SingleItem data={e} />
                         </Row>
