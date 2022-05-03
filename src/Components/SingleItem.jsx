@@ -22,16 +22,21 @@ const SingleItem = ({ data }) => {
         <>
             {
                 data.map(bike =>
-
                     <>
-
                         <Col md={12} style={{ display: "flex", justifyContent: "space-between", paddingTop: "15px" }}>
 
-                            {isFavourite ? <RiHeart3Fill className="icon" onClick={() => isFav()} /> : <RiHeart3Line className="icon" onClick={() => isFav()} />
+                            {isFavourite ? <RiHeart3Fill className="icon" onClick={() => isFav()} /> :
+                                <RiHeart3Line className="icon" onClick={() => isFav()} />
                             }
 
-                            <div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{bike.state}</p></div></Col>
+                            {bike.state === "usato" ? <div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{bike.state}</p></div>
+                                :
+                                <div height="40" width="80" style={{ backgroundColor: "gray", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{bike.state}</p></div>
+                            }
+                        </Col>
                         <Col md={12} style={{ display: "flex" }}>
+
+
                             <Carousel className="carousel">
                                 <Carousel.Item>
                                     <img
