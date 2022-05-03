@@ -40,7 +40,6 @@
 
 .carousel {
     width: 100%;
-    max-height: 70%;
     border: 1px solid rgba(168, 168, 168, 0.103);
     margin-left: 10%;
 }
@@ -78,4 +77,8 @@
     padding-top: 20px;
     position: relative;
     z-index: -1;
+}
+
+.visually-hidden {
+    display: none;
 }
