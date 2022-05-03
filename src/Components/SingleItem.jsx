@@ -7,7 +7,6 @@ import { useState } from "react";
 const SingleItem = ({ data }) => {
     const [isFavourite, setIsFavourite] = useState(false);
     const [isCompare, setIsCompare] = useState(false);
-    console.log("props", data);
 
     const isFav = () => {
         setIsFavourite(!isFavourite);
@@ -84,9 +83,11 @@ const SingleItem = ({ data }) => {
                 <RiStarFill />
                 <RiStarFill />
             </Col>{" "}
+
             <Col md={2}>
                 <p> 8.000</p>
             </Col>
+
             <Col md={12}>
                 <h3
                     style={{
