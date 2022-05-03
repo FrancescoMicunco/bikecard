@@ -20,67 +20,65 @@ const SingleItem = ({ data }) => {
 
     return (
         <>
-            {
-                data.map(bike =>
-                    <>
-                        <Col md={12} style={{ display: "flex", justifyContent: "space-between", paddingTop: "15px" }}>
 
-                            {isFavourite ? <RiHeart3Fill className="icon" onClick={() => isFav()} /> :
-                                <RiHeart3Line className="icon" onClick={() => isFav()} />
-                            }
+            <Col md={12} style={{ display: "flex", justifyContent: "space-between", paddingTop: "15px" }}>
 
-                            {bike.state === "usato" ? <div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{bike.state}</p></div>
-                                :
-                                <div height="40" width="80" style={{ backgroundColor: "gray", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{bike.state}</p></div>
-                            }
-                        </Col>
-                        <Col md={12} style={{ display: "flex" }}>
+                {isFavourite ? <RiHeart3Fill className="icon" onClick={() => isFav()} /> :
+                    <RiHeart3Line className="icon" onClick={() => isFav()} />
+                }
+
+                {data.state === "usato" ? <div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{data.state}</p></div>
+                    :
+                    <div height="40" width="80" style={{ backgroundColor: "gray", paddingTop: "20px", borderBottom: "solid 20px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{data.state}</p></div>
+                }
+            </Col>
+            <Col md={12} style={{ display: "flex" }}>
 
 
-                            <Carousel className="carousel">
-                                <Carousel.Item>
-                                    <img
-                                        className="d-block w-100 imgCarousel"
-                                        src={bike.img1}
-                                        alt="First slide"
-                                    />
+                <Carousel className="carousel">
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 imgCarousel"
+                            src={data.img1}
+                            alt="First slide"
+                        />
 
-                                </Carousel.Item>
-                                <Carousel.Item>
-                                    <img
-                                        className="d-block w-100 imgCarousel"
-                                        src={bike.img2}
-                                        alt="Second slide"
-                                    />
-
-
-                                </Carousel.Item>
-                                <Carousel.Item>
-                                    <img
-                                        className="d-block w-100 imgCarousel"
-                                        src={bike.img3}
-                                        alt="Third slide"
-                                    />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 imgCarousel"
+                            src={data.img2}
+                            alt="Second slide"
+                        />
 
 
-                                </Carousel.Item>
-                            </Carousel>
-                        </Col>
-                        <Col md={6}><p style={{ fontWeight: "bold" }}>{bike.category} | {bike.year}</p></Col>
-                        <Col md={4} style={{ justifyContent: "flex-end" }}><RiStarFill /><RiStarFill /><RiStarFill /><RiStarFill /></Col>   <Col md={2}><p> 8.000</p></Col>
-                        <Col md={12}><h3 style={{ fontStyle: "italic", paddingLeft: "0", marginLeft: "0", fontWeight: "bold" }}>{bike.title}</h3></Col>
-                        <Col md={12}><p className="description">{bike.description}</p></Col>
-                        <Col md={12}><Badge className="badge">{bike.tag}</Badge></Col>
-                        <Col md={12}><p>TAGLIA <span style={{ fontWeight: "bold" }}> S M L XL</span></p></Col>
-                        <Col md={12}><p>COLORI <span style={{ fontWeight: "bold" }}> {bike.colori}</span></p></Col>
-                        <Col md={12}><p style={{ fontWeight: "bold", fontSize: "1.5rem" }}>{bike.discountPrice} <span style={{ fontWeight: "gray", color: "gray", fontSize: "1rem", textDecoration: "line-through" }}> {bike.prezzo}</span></p></Col>
-                        <Col md={6} style={{ display: "flex", justifyContent: "left", alignItems: "baseline", paddingBottom: "15px" }}>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100 imgCarousel"
+                            src={data.img3}
+                            alt="Third slide"
+                        />
 
-                            {isCompare ? <BsCheckSquare onClick={() => isComp()} /> : <BsSquare onClick={() => isComp()} />}<p style={{ marginLeft: "10px" }}>COMPARA</p> </Col>
 
-                        <Col md={6}><Link to="detail"><Button style={{ backgroundColor: "black", border: "none" }}>SCOPRI <BsArrowRight /></Button></Link></Col>;
-                    </>
-                )}
+                    </Carousel.Item>
+                </Carousel>
+            </Col>
+            <Col md={6}><p style={{ fontWeight: "bold" }}>{data.category} | {data.year}</p></Col>
+            <Col md={4} style={{ justifyContent: "flex-end" }}><RiStarFill /><RiStarFill /><RiStarFill /><RiStarFill /></Col>   <Col md={2}><p> 8.000</p></Col>
+            <Col md={12}><h3 style={{ fontStyle: "italic", paddingLeft: "0", marginLeft: "0", fontWeight: "bold" }}>{data.title}</h3></Col>
+            <Col md={12}><p className="description">{data.description}</p></Col>
+            <Col md={12}><Badge className="badge">{data.tag}</Badge></Col>
+            <Col md={12}><p>TAGLIA <span style={{ fontWeight: "bold" }}> S M L XL</span></p></Col>
+            <Col md={12}><p>COLORI <span style={{ fontWeight: "bold" }}> {data.colori}</span></p></Col>
+            <Col md={12}><p style={{ fontWeight: "bold", fontSize: "1.5rem", fontFamily: "Courier" }}>€ {data.discountPrice} <span style={{ fontWeight: "gray", color: "gray", fontSize: "1rem", textDecoration: "line-through" }}>€ {data.prezzo}</span></p></Col>
+            <Col md={6} style={{ display: "flex", justifyContent: "left", alignItems: "baseline", paddingBottom: "15px" }}>
+
+                {isCompare ? <BsCheckSquare onClick={() => isComp()} /> : <BsSquare onClick={() => isComp()} />}<p style={{ marginLeft: "10px" }}>COMPARA</p> </Col>
+
+            <Col md={6}><Link to="detail"><Button style={{ backgroundColor: "black", border: "none" }}>SCOPRI <BsArrowRight /></Button></Link></Col>;
+
+
         </>)
 }
 
