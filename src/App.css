@@ -8,6 +8,10 @@
     color: #61dafb;
 }
 
+.home {
+    text-align: center;
+}
+
 .card {
     background-color: rgba(155, 155, 155, 0.123);
     border: none;
