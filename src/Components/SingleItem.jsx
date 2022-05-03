@@ -82,7 +82,7 @@ const SingleItem = ({ data }) => {
 
                 {isCompare ? <BsCheckSquare onClick={() => isComp()} /> : <BsSquare onClick={() => isComp()} />}<p style={{ marginLeft: "10px" }}>COMPARA</p> </Col>
 
-            <Col md={6}><Link to="detail"><Button style={{ backgroundColor: "black", border: "none" }}>SCOPRI <BsArrowRight /></Button></Link></Col>
+            <Col md={6}><Link to="/detail"><Button style={{ backgroundColor: "black", border: "none" }}>SCOPRI <BsArrowRight /></Button></Link></Col>
 
 
         </>)
