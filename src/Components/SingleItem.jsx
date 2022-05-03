@@ -27,6 +27,8 @@ const SingleItem = ({ data }) => {
                     <RiHeart3Line className="icon" onClick={() => isFav()} />
                 }
 
+
+
                 {data.state === "usato" ? <div className="squareDiv" >
                     <p className="state" >{data.state}</p>
                     <div className="triangleDiv" ></div>
@@ -70,7 +72,7 @@ const SingleItem = ({ data }) => {
                     </Carousel.Item>
                 </Carousel>
             </Col>
-            <Col md={6}><p style={{ fontWeight: "bold" }}>{data.category} | {data.year}</p></Col>
+            <Col md={6}><p style={{ fontWeight: "bold", textTransform: "uppercase" }}>{data.category} | {data.year}</p></Col>
             <Col md={4} style={{ justifyContent: "flex-end" }}><RiStarFill /><RiStarFill /><RiStarFill /><RiStarFill /></Col>   <Col md={2}><p> 8.000</p></Col>
             <Col md={12}><h3 style={{ fontStyle: "italic", paddingLeft: "0", marginLeft: "0", fontWeight: "bold" }}>{data.title}</h3></Col>
             <Col md={12}><p className="description">{data.description}</p></Col>
@@ -82,9 +84,11 @@ const SingleItem = ({ data }) => {
 
                 {isCompare ? <BsCheckSquare onClick={() => isComp()} /> : <BsSquare onClick={() => isComp()} />}<p style={{ marginLeft: "10px" }}>COMPARA</p> </Col>
 
-            <Col md={6}><Link to="/detail"><Button style={{ backgroundColor: "black", border: "none" }}>SCOPRI <BsArrowRight /></Button></Link></Col>
+            <Col md={6}>
 
-
+                <Link to="/detail">
+                    <Button style={{ backgroundColor: "black", border: "none" }}>SCOPRI <BsArrowRight /></Button>
+                </Link></Col>
         </>)
 }
 
