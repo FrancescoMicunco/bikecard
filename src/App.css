@@ -44,3 +44,33 @@
     max-height: 300px;
     max-width: 400px;
 }
+
+.state {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.triangleDiv {
+    position: absolute;
+    top: 50%;
+    height: 0;
+    width: 0;
+    border-width: 22px 0 0 42px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    z-index: -10;
+}
+
+.squareDiv {
+    background-color: orange;
+    padding-top: 20px;
+    position: relative;
+    z-index: -1;
+}
+
+.squareDivGray {
+    background-color: rgba(83, 83, 83, 0.545);
+    padding-top: 20px;
+    position: relative;
+    z-index: -1;
+}

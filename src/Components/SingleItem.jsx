@@ -27,9 +27,15 @@ const SingleItem = ({ data }) => {
                     <RiHeart3Line className="icon" onClick={() => isFav()} />
                 }
 
-                {data.state === "usato" ? <div height="40" width="80" style={{ backgroundColor: "orange", paddingTop: "20px", borderBottom: "solid 10px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{data.state}</p></div>
+                {data.state === "usato" ? <div className="squareDiv" >
+                    <p className="state" >{data.state}</p>
+                    <div className="triangleDiv" ></div>
+
+                </div>
                     :
-                    <div height="40" width="80" style={{ backgroundColor: "gray", paddingTop: "20px", borderBottom: "solid 10px white", paddingBottom: "0" }}><p style={{ fontWeight: "bold", marginBottom: "0" }}>{data.state}</p></div>
+                    <div className="squareDivGray">
+                        <p className="state" >{data.state}</p>
+                        <div className="triangleDiv" ></div> </div>
                 }
             </Col>
             <Col md={12} style={{ display: "flex" }}>
